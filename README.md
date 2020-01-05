@@ -1,4 +1,4 @@
-# TranslationExtensions
+# TranslationExtensions - Swift Package
 
 Contains a few extensions for looking up localized strings prefixed with current class name.
 
