@@ -9,27 +9,21 @@
 import Foundation
 import UIKit
 
-extension UIButton: Translatable {
-    public func translateTitle() {
-        self.setTitle(self.translateKey(self.titleLabel?.text ?? "please set title"), for: .normal);
+extension UIViewController: Translatable {
+    public func translateButton(_ button:UIButton) {
+        button.setTitle(self.translateKey(button.titleLabel?.text ?? "please set title"), for: .normal);
     }
-}
-
-extension UILabel: Translatable {
-    public func translateText() {
-        self.text = self.translateKey(self.text ?? "please set text")
+    
+    public func translateLabel(_ label:UILabel) {
+        label.text = self.translateKey(label.text ?? "please set text")
     }
-}
- 
-extension UITextField: Translatable {
-    public func translatePlaceholder() {
-        if let placeholder = self.placeholder {
-            self.placeholder = self.translateKey(placeholder)
+    
+    public func translateTextField(_ textField:UITextField) {
+        if let placeholder = textField.placeholder {
+            textField.placeholder = self.translateKey(placeholder)
         }
     }
-}
     
-extension UIViewController: Translatable {
     public func translateTitle() {
         self.title = self.translateKey("title")
     }
