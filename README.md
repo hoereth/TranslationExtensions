@@ -6,6 +6,9 @@ Contains a few extensions for looking up localized strings prefixed with current
 
 ### Basic Example
 
+Just make your class conform to "Translatable" protocol to extend it with a few basic
+translation functions.
+
 ```swift
 import TranslationExtensions
 ...
@@ -20,6 +23,9 @@ class SomeClass: Translatable {
 ```
 
 ### ViewController Example
+
+Every ViewController in your project will automatically have a few translation functions, 
+once you import "TranslationExtensions".
 
 ```swift
 import TranslationExtensions
