@@ -1,4 +1,4 @@
-# 1.1.0
+# 1.3.0
 ## Added
 - TranslationExtensions.swift, TranslationExtensionsUIKit.swift
 # 1.0.0
