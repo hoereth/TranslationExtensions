@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Translatable {
+public protocol Translatable {
 }
 
 extension Translatable {
