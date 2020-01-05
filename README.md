@@ -9,7 +9,7 @@ Contains a few extensions for looking up localized strings prefixed with current
 ```swift
 import TranslationExtensions
 ...
-class SomeClass {
+class SomeClass: Translatable {
   ...
   // localized string with key "SomeClass.myKey"
   let translation1 = self.translateKey("myKey")
