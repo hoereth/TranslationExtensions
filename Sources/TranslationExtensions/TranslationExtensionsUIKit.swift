@@ -27,4 +27,24 @@ extension UIViewController: Translatable {
     public func translateTitle() {
         self.title = self.translateKey("title")
     }
+    
+    public func translateTabBarItem(_ tabItem: UITabBarItem){
+        if let key=tabItem.title {
+            tabItem.title = self.translateKey(key)
+        }
+    }
+    
+    public func translateBarButtonItem(_ buttonItem:UIBarButtonItem){
+        if let key = buttonItem.title {
+            buttonItem.title = self.translateKey(key)
+        }
+    }
+    
+    public func translateSegmentedControl(_ control:UISegmentedControl) {
+        for i in 0..<control.numberOfSegments {
+            if let key = control.titleForSegment(at: i) {
+                control.setTitle(self.translateKey(key), forSegmentAt: i)
+            }
+        }
+    }
 }
